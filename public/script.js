@@ -20,7 +20,7 @@ window.initMap = function(){
             })
         })    
         .then((res) => res.json())
-        .then(data => { console.log(data)//setWeatherData(data, place.formatted_address)
+        .then(data => { console.log(data)//  setWeatherData(data, place.formatted_address)
     })
 
     })
