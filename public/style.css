@@ -2,25 +2,39 @@
 
 *{
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     color: white;
     font-family: 'Nunito', sans-serif;
 }
 
 body{
     background-image: linear-gradient(325deg, rgb(28, 96, 156), rgb(163, 222, 241));
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    position:relative;
+}
+
+img{
+    visibility:hidden;
+}
+
+img[src]{
+    visibility: visible
+}
+
+p{
+    margin: 5px;
 }
 
 main{
     width: 80%;
-    height: 80%;
-    padding: 5em;
+    height: 100%;
+    padding: 2em;
     display: flex;
     flex-direction: column;
-    align-items: space-evenly;
+    align-items: center;
     border-radius: 10px;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
@@ -36,20 +50,92 @@ header{
     justify-content: space-between;
     align-items: center;
     font-size: 1rem;
-    margin-bottom: 3em;
+    padding: 0 2em;
 }
 
 .days__wrapper{
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 60%;
-    justify-content: space-evenly;
-    flex:1;
+    height: 70%;
+
 }
 
 .day{
+    padding: 10px 3px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    margin: 3em 0;
+}
+
+.day:not(:first-child):not(:last-child){
+    border-right: solid 1px #6161613d
+}
+
+#today{
+    margin: 0 !important;
+    padding: 5px 3px;
+    background-color:rgba(255, 255, 255, 0.31);
+    flex: 2;
+    border-radius: 10px;
+}
+
+.today__main__info{
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    font-size: 1.5em;
+    padding: 1em;
+}
+
+.temperature{
+    font-size: 3em;
+    line-height: 1em;
+}
+
+.today__other__info{
+    height: 40%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    padding: 1em;
+    text-align:center
+}
+
+.box{
+    font-size: 1.5em;
+    padding: 0.5em;
+}
+
+.box .label{
+    font-size: 0.6em !important;
+}
+
+.day__main__info{
+    height: 60%;
+}
+
+.day__other__info{
+    height: 40%;
+    font-size: 1.3em;
+}
+
+.day__other__info > p.label{
+    font-size: 0.6em !important;
+    margin-top: 1.3em
+}
+
+input{
+    color: black;
+}
+
+span .pac-matched{
+    color: black;
 }
 
 .powered{

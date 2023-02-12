@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="rgb(163, 222, 241)">
     <link rel="stylesheet" href="./style.css">
-    <script defer async type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=${add google key}&libraries=places&callback=initMap"></script>
+    <script defer async type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRRFtSKuYqzQFTHu2nQKY-12k9-aH-3I4&libraries=places&callback=initMap"></script>
     <script src="./script.js" defer></script>
     <title>Weather</title>
 </head>
@@ -13,7 +14,7 @@
     <main>
         <header>
             <div class="selected_location">
-                <h1>Please enter a location</h1>
+                <h1 data-selected-location>Please enter a location</h1>
             </div>
             <div class="location__search">
                 <input type="text" placeholder="Enter location.." data-location-search>
@@ -21,55 +22,117 @@
         </header>
 
         <div class="days__wrapper">
-            <div class="day" id="today">
-                <div class="icon__wrapper"></div>
-                <p class="temperature">--</p>
-                <p class="description">--</p>
-                <div class="sun">
-                    <p class="sunrise">Sunrise</p>
-                    <p class="sunset">Sunset</p>
+            <div id="today">
+
+                <div class="today__main__info">
+                    <div class="icon__wrapper">
+                        <img class="icon" data-icon height="100" width="100">
+                    </div>
+                    <p class="weekday" data-weekday>Today</p>
+                    <p class="date" data-date>--</p>
+                    <p class="temperature" data-temp>-- °C</p>
+                    <p class="status" data-status>--</p>
+                </div>
+                <div class="today__other__info">
+                    <div class="box">
+                        <p class="label">Night</p>
+                        <p class="night" data-night>-- °C</p>
+                    </div>
+                    <div class="box">
+                        <p class="label">Feels like</p>
+                        <p class="feels__like" data-feels-like>-- °C</p>
+                    </div>
+                    <div class="box">
+                        <p class="label">Sunrise</p>
+                        <p class="sunrise" data-sunrise>--:--</p>
+                    </div>
+                    <div class="box">
+                        <p class="label">Sunset</p>
+                        <p class="sunset" data-sunset>--:--</p>
+                    </div>    
                 </div>
             </div>
 
             <div class="day">
-                <div class="icon__wrapper"></div>
-                <p class="temperature">--</p>
-                <p class="description">--</p>
-                <div class="sun">
-                    <p class="sunrise">Sunrise</p>
-                    <p class="sunset">Sunset</p>
+                <div class="day__main__info">
+                    <div class="icon__wrapper">
+                        <img class="icon" data-icon height="100" width="100">
+                    </div>
+                    <p class="weekday" data-weekday>--</p>
+                    <p class="date" data-date>--</p>
+                    <p class="temperature" data-temp>-- °C</p>
+                    <p class="status" data-status>--</p>
+                </div>
+                <div class="day__other__info">
+                    <p class="label">Night</p>
+                    <p class="sunrise" data-night>-- °C</p>
+                    <p class="label">Sunrise</p>
+                    <p class="sunrise" data-sunrise>--:--</p>
+                    <p class="label">Sunset</p>
+                    <p class="sunset" data-sunset>--:--</p>
                 </div>
             </div>
 
             <div class="day">
-                <div class="icon__wrapper"></div>
-                <p class="temperature">--</p>
-                <p class="description">--</p>
-                <div class="sun">
-                    <p class="sunrise">Sunrise</p>
-                    <p class="sunset">Sunset</p>
+                <div class="day__main__info">
+                    <div class="icon__wrapper">
+                        <img class="icon" data-icon height="100" width="100">
+                    </div>
+                    <p class="weekday" data-weekday>--</p>
+                    <p class="date" data-date>--</p>
+                    <p class="temperature" data-temp>-- °C</p>
+                    <p class="status" data-status>--</p>
+                </div>
+                <div class="day__other__info">
+                    <p class="label">Night</p>
+                    <p class="sunrise" data-night>-- °C</p>
+                    <p class="label">Sunrise</p>
+                    <p class="sunrise" data-sunrise>--:--</p>
+                    <p class="label">Sunset</p>
+                    <p class="sunset" data-sunset>--:--</p>
+                </div>
+            </div>
+            
+            <div class="day">
+                <div class="day__main__info">
+                    <div class="icon__wrapper">
+                        <img class="icon" data-icon height="100" width="100">
+                    </div>
+                    <p class="weekday" data-weekday>--</p>
+                    <p class="date" data-date>--</p>
+                    <p class="temperature" data-temp>-- °C</p>
+                    <p class="status" data-status>--</p>
+                </div>
+                <div class="day__other__info">
+                    <p class="label">Night</p>
+                    <p class="sunrise" data-night>-- °C</p>
+                    <p class="label">Sunrise</p>
+                    <p class="sunrise" data-sunrise>--:--</p>
+                    <p class="label">Sunset</p>
+                    <p class="sunset" data-sunset>--:--</p>
                 </div>
             </div>
 
             <div class="day">
-                <div class="icon__wrapper"></div>
-                <p class="temperature">--</p>
-                <p class="description">--</p>
-                <div class="sun">
-                    <p class="sunrise">Sunrise</p>
-                    <p class="sunset">Sunset</p>
+                <div class="day__main__info">
+                    <div class="icon__wrapper">
+                        <img class="icon" data-icon height="100" width="100">
+                    </div>
+                    <p class="weekday" data-weekday>--</p>
+                    <p class="date" data-date>--</p>
+                    <p class="temperature" data-temp>-- °C</p>
+                    <p class="status" data-status>--</p>
+                </div>
+                <div class="day__other__info">
+                    <p class="label">Night</p>
+                    <p class="sunrise" data-night>-- °C</p>
+                    <p class="label">Sunrise</p>
+                    <p class="sunrise" data-sunrise>--:--</p>
+                    <p class="label">Sunset</p>
+                    <p class="sunset" data-sunset>--:--</p>
                 </div>
             </div>
 
-            <div class="day">
-                <div class="icon__wrapper"></div>
-                <p class="temperature">--</p>
-                <p class="description">--</p>
-                <div class="sun">
-                    <p class="sunrise">Sunrise</p>
-                    <p class="sunset">Sunset</p>
-                </div>
-            </div>
             
         </div>
     </main>
