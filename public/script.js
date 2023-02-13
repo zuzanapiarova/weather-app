@@ -27,7 +27,6 @@ window.initMap = function(){
 }
 
 //TODO
-//show day of the week on each day card
 //style input field
 
 const selectedLocation = document.querySelector('[data-selected-location]');
@@ -46,10 +45,14 @@ const sunrise = [...document.querySelectorAll('[data-sunrise]')]
 const sunset= [...document.querySelectorAll('[data-sunset]')]
 
 const todayFeelsLike = document.querySelector('[data-feels-like]')
+const todayDay = document.querySelector('[data-today-temp]')
+const todayWind = document.querySelector('[data-wind]')
 
 function setWeatherData(data, place){
     selectedLocation.textContent = place;
     todayFeelsLike.textContent = `${(data.current.feels_like).toFixed(1)}°C`;
+    todayDay.textContent = `${(data.daily[0].temp.day).toFixed(1)}°C`;
+    todayWind.textContent = `${data.current.wind_speed} m/s`;
     for(let i = 0; i < 5; i++){
             icon[i].src = `https://openweathermap.org/img/w/${data.daily[i].weather[0].icon}.png`
             let d = new Date(data.daily[i].dt * 1000)//.toLocaleDateString("en-DE")

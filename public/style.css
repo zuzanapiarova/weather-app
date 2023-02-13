@@ -9,7 +9,7 @@
 
 body{
     background-image: linear-gradient(325deg, rgb(28, 96, 156), rgb(163, 222, 241));
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,7 +30,7 @@ p{
 
 main{
     width: 80%;
-    height: 100%;
+    height: 90%;
     padding: 2em;
     display: flex;
     flex-direction: column;
@@ -53,11 +53,27 @@ header{
     padding: 0 2em;
 }
 
+input{
+    background-color: transparent;
+    font-size: 1em;
+    padding: 0.3em 1em;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.433)
+}
+
+input::placeholder{
+    color: rgba(255, 255, 255, 0.77);
+}
+
+span .pac-matched{
+    color: black;
+}
+
 .days__wrapper{
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 70%;
+    height: 80%;
 
 }
 
@@ -84,7 +100,7 @@ header{
 }
 
 .today__main__info{
-    height: 60%;
+    height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -93,22 +109,33 @@ header{
     padding: 1em;
 }
 
+.info__wrapper > span{
+    font-size: 0.7em;
+}
+
+.info__icon__wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .temperature{
     font-size: 3em;
     line-height: 1em;
 }
 
 .today__other__info{
-    height: 40%;
+    height: 50%;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: calc(100% / 3) calc(100% / 3) calc(100% / 3) ;
     padding: 1em;
     text-align:center
 }
 
 .box{
-    font-size: 1.5em;
+    font-size: 1.3em;
     padding: 0.5em;
 }
 
@@ -128,14 +155,6 @@ header{
 .day__other__info > p.label{
     font-size: 0.6em !important;
     margin-top: 1.3em
-}
-
-input{
-    color: black;
-}
-
-span .pac-matched{
-    color: black;
 }
 
 .powered{

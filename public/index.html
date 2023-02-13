@@ -25,19 +25,35 @@
             <div id="today">
 
                 <div class="today__main__info">
-                    <div class="icon__wrapper">
-                        <img class="icon" data-icon height="100" width="100">
+                    <div class="info__icon__wrapper">
+                        <div class="info__wrapper">
+                            <p class="weekday" data-weekday>Today</p>
+                            <p class="date" data-date>--</p>
+                            <span class="current">currently</span>
+                        </div>
+                        <div class="icon__wrapper">
+                            <img class="icon" data-icon height="100" width="100">
+                        </div>
                     </div>
-                    <p class="weekday" data-weekday>Today</p>
-                    <p class="date" data-date>--</p>
                     <p class="temperature" data-temp>-- °C</p>
                     <p class="status" data-status>--</p>
                 </div>
                 <div class="today__other__info">
                     <div class="box">
+                        <p class="label">Day</p>
+                        <p class="night" data-today-temp>-- °C</p>
+                    </div>
+
+                    <div class="box">
                         <p class="label">Night</p>
                         <p class="night" data-night>-- °C</p>
                     </div>
+
+                    <div class="box">
+                        <p class="label">Wind</p>
+                        <p class="night" data-wind>-- ms</p>
+                    </div>
+
                     <div class="box">
                         <p class="label">Feels like</p>
                         <p class="feels__like" data-feels-like>-- °C</p>
